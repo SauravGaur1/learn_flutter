@@ -29,6 +29,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   google_fonts: ^5.1.0
+  provider:
+  carousel_slider:
   flutter:
     sdk: flutter
 

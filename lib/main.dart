@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_start/models/loginModel.dart';
 import 'package:flutter_start/utils/routes.dart';
 import 'package:flutter_start/utils/themes.dart';
 import 'package:flutter_start/views/homePage.dart';
 import 'package:flutter_start/views/loginPage.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => LoginModel()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         MyRoutes.homeRoute : (context)=> HomePage(),
         MyRoutes.loginRoute : (context) => LoginPage()

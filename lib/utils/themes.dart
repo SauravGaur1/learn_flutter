@@ -9,7 +9,7 @@ class MyThemes {
   static ThemeData lightTheme(BuildContext context){
     return ThemeData(
       fontFamily: GoogleFonts.lato().fontFamily,
-      primarySwatch: Colors.deepPurple,
+      primarySwatch: Colors.blue,
     );
   }
   static ThemeData darkTheme(BuildContext context){
